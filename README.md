@@ -11,6 +11,12 @@
 ### tmux
 * Change tmux setting
 
+### git
+* setup my name and email
+
+### ssh
+* import my ssh config file
+
 ### ssh config
 * private?
 
