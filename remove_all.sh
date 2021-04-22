@@ -9,4 +9,5 @@ rm $HOME/.zsh*
 rm $HOME/.tmux.conf
 rm $HOME/.vimrc
 rm $HOME/.bash_profile
+rm $HOME/.gitconfig
 rm $HOME/.qles*

@@ -3,6 +3,7 @@ set -e
 
 # install oh-my-zsh
 printf "Executing oh-my-zsh install script\n"
+# sed is for removing 'exec zsh -l when installation is done'
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sed '/exec zsh*/d')"
 
 # install oh-my-zsh plugin
