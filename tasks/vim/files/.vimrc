@@ -7,6 +7,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set ai
