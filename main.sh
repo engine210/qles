@@ -1,10 +1,9 @@
 #!/bin/bash
-# cd $HOME
+cd $HOME
 
 # Clone this repo
-# git clone https://github.com/engine210/qles.git
-# REPO_DIR=$HOME/qles
-export REPO_DIR=/home/engine210/Desktop/Projects/qles
+git clone https://github.com/engine210/qles.git
+export REPO_DIR=$HOME/qles
 export BAK_DIR=$HOME/.qles_backup_tmp
 export LBLUE='\033[1;34m' # Light blue
 export YELLOW='\033[1;33m'
