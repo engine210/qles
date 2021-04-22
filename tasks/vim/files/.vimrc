@@ -6,5 +6,4 @@ set incsearch
 filetype indent on
 syntax on
 set t_Co=256
-colorscheme onedark
 set pastetoggle=<F2>

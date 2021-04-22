@@ -1,6 +1,8 @@
 #!/bin/bash
-echo 'Configuring tmux...'
-for i in {1..10}
-do
-    echo -n $i
-done
+set -e
+
+printf "${LBLUE}Copying tmux configutation\n${NC}"
+if [ -f $HOME/.tmux.conf ]; then
+	mv $HOME/.tmux.conf $BAK_DIR
+fi
+cp $REPO_DIR/tasks/tmux/files/.tmux.conf ~/.tmux.conf

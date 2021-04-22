@@ -1,0 +1,7 @@
+[user]
+    name = Stevn Wang
+    email = engine210@gmail.com
+[color]
+    ui = true
+[alias]
+    lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --

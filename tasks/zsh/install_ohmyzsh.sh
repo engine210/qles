@@ -1,28 +1,20 @@
+#!/bin/bash
+set -e
 
 # install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" | zsh
-# 
-# clone the script
-rm -rf ~/myZsh
-git clone https://github.com/engine210/myZsh.git ~/myZsh
-# 
+printf "Executing oh-my-zsh install script\n"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sed '/exec zsh*/d')"
+
 # install oh-my-zsh plugin
+printf "Cloning plugins..."
 cd $HOME/.oh-my-zsh/custom/plugins/
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-git clone https://github.com/zsh-users/zsh-autosuggestions.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git &> /dev/null
+git clone https://github.com/zsh-users/zsh-autosuggestions.git &> /dev/null
 cd $HOME
-# 
-# edit .zshrc ( commend here, use copy .zshrc instead )
-# sed -i 's/^ZSH_THEME=.*/ZSH_THEME="fishy"/g' ~/.zshrc
-# sed -i 's/^plugins=.*/plugins=(\n\tgit\n\tapple\n\tbanana\n)/g' ~/.zshrc
-# backup .zshrc if already exist
+printf "done\n"
+
+
 if [ -f $HOME/.zshrc ]; then
-	mv $HOME/.zshrc $HOME/.zshrc.bak.$(date "+%Y.%m.%d-%H:%M:%S")
+	mv $HOME/.zshrc $BAK_DIR
 fi
-cp ~/myZsh/.zshrc ~/.zshrc
-# 
-# clean up
-rm -rf ~/myZsh
-# 
-exec zsh
-# 
+cp $REPO_DIR/tasks/zsh/files/.zshrc ~/.zshrc
