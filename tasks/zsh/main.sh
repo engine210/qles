@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 LBLUE='\033[1;34m' # Light blue
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
@@ -12,7 +13,7 @@ if [[ -z "$(grep zsh /etc/shells)" ]]; then
 	cd $REPO_DIR/tasks/zsh
 	source install_zsh.sh # use source since inside script will modified PATH
 elif [[ "$(basename $SHELL)" != "zsh" ]]; then
-	chsh -s $(grep zsh /etc/shells)
+	chsh -s $(which zsh)
 fi
 
 printf "${LBLUE}Installing oh-my-zsh\n${NC}"
