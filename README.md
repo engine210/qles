@@ -2,7 +2,7 @@
 
 ## Quick Start
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/engine210/qles/master/main.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/engine210/qles/master/main.sh)"
 ```
 
 ## content

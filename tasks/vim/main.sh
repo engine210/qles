@@ -2,7 +2,7 @@
 set -e
 
 printf "${LBLUE}Copying vim configutation\n${NC}"
-if [ -f $HOME/.tmux.conf ]; then
-	mv $HOME/.tmux.conf $BAK_DIR
+if [ -f $HOME/.vimrc ]; then
+	mv $HOME/.vimrc $BAK_DIR
 fi
-cp $REPO_DIR/tasks/tmux/files/.tmux.conf ~/.tmux.conf
+cp $REPO_DIR/tasks/vim/files/.vimrc ~/.vimrc
