@@ -13,13 +13,33 @@ TASKS=( 'zsh' 'tmux' 'vim' 'git' )
 
 # Create a directory to backup old config
 mkdir $BAK_DIR
-#########################################
 
 for i in "${TASKS[@]}"
 do
-    cd $REPO_DIR/tasks/$i
-    bash main.sh
+    echo -n "Configure $i [Y/n]: "
+    read choose
+    if [[ -z $choose || $choose == 'Y' || $choose == 'y' ]]; then
+        eval "configur_$i"='y'
+    else
+        eval "configur_$i"='n'
+    fi
 done
+
+for i in "${TASKS[@]}"
+do
+    tmp="configur_$i"
+    echo "${!tmp}"
+    if [[ ${!tmp} == 'y' ]]; then
+        cd $REPO_DIR/tasks/$i
+        bash main.sh
+    fi
+done
+
+# for i in "${TASKS[@]}"
+# do
+#     cd $REPO_DIR/tasks/$i
+#     bash main.sh
+# done
 
 
 # Rename the backup directory

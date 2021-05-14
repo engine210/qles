@@ -19,12 +19,6 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/engine210/qles/master/ma
 * git
   * setup my name and email
 
-* ssh
-  * import my ssh config file
-
-* ssh config
-  * private?
-
 ## Requirement
 * bash
 * curl or wget
