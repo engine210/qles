@@ -17,7 +17,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/engine210/qles/master/ma
   * Change tmux setting
 
 * git
-  * setup my name and email
+  * Setup my name and email
+  * **Note: You should change to your own name and email in `tasks/git/files/.gitconfig`**
 
 ## Requirement
 * bash
